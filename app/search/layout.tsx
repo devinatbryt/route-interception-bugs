@@ -4,13 +4,13 @@ import { SearchForm } from "@/components/forms";
 
 export default function SearchLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="search-layout">
-      <SearchForm.Root>
-        <SearchForm.QueryInput placeholder="Hello world" />
-      </SearchForm.Root>
-      <Suspense>
+    <Suspense>
+      <div className="search-layout">
+        <SearchForm.Root>
+          <SearchForm.QueryInput placeholder="Hello world" />
+        </SearchForm.Root>
         <Search.Wrapper>{children}</Search.Wrapper>
-      </Suspense>
-    </div>
+      </div>
+    </Suspense>
   );
 }
